@@ -4,7 +4,7 @@
   "description": ">",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mgstabrani/bookshelf-api/issues"
   },
-  "homepage": "https://github.com/mgstabrani/bookshelf-api#readme"
+  "homepage": "https://github.com/mgstabrani/bookshelf-api#readme",
+  "dependencies": {
+    "@hapi/hapi": "^20.1.3"
+  }
 }
