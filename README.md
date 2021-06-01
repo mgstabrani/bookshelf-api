@@ -4,7 +4,7 @@
  - [Technologies](#Technologies)
  - [Install](#Install)
  - [Run](#Run)
- - [API Guide](#API%20Guide)
+ - [API Guide](#API-Guide)
  - [Author](#Author)
  - [Reference](#Reference)
 
