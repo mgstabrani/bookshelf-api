@@ -9,12 +9,6 @@ const saveBookHandler = (request, h) => {
     const insertedAt = new Date().toISOString();
     const updatedAt = insertedAt;
 
-    const newBook = {id, name, year, author, summary, publisher, pageCount, readPage, finished, reading, insertedAt, updatedAt};
-
-    books.push(newBook);
-
-    const isSuccess = books.filter((book) => book.id === id).length > 0;
-
     if(name == null){
         const response = h.response({
             status: 'fail',
@@ -32,6 +26,10 @@ const saveBookHandler = (request, h) => {
         response.code(400);
         return response;
     };
+
+    const newBook = {id, name, year, author, summary, publisher, pageCount, readPage, finished, reading, insertedAt, updatedAt};
+    books.push(newBook);
+    const isSuccess = books.filter((book) => book.id === id).length > 0;
 
     if(isSuccess){
         const response = h.response({
@@ -53,12 +51,28 @@ const saveBookHandler = (request, h) => {
     }
 };
 
-const getAllBooksHandler = () => ({
-    status: 'success',
-    data: {
-        books,
-    },
-});
+const getAllBooksHandler = (request, h) => {
+    let getBooks = [];
+
+    for(let i = 0; i < books.length; i++){
+        getBooks.push({
+            "id" : books[i]["id"],
+            "name": books[i]["name"],
+            "publisher": books[i]["publisher"],
+
+        });
+    }
+
+    const response = h.response({
+        status: 'success',
+        data: {
+            getBooks,
+        },
+    });
+
+    response.code(200);
+    return response;
+};
 
 const getBookByIdHandler = (request, h) => {
     const { bookId } = request.params;

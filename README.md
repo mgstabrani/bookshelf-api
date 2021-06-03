@@ -64,30 +64,12 @@ npm run start
             {
                 "id": "5xiZHYmYa5nUtR9X",
                 "name": "Harry Potter",
-                "year": 2008,
-                "author": "Joko",
-                "summary": "Good",
-                "publisher": "American Publisher",
-                "pageCount": 100,
-                "readPage": 75,
-                "finished": false,
-                "reading": true,
-                "insertedAt": "2021-06-01T03:10:01.119Z",
-                "updatedAt": "2021-06-01T03:10:01.119Z"
+                "publisher": "American Publisher"
             },
             {
                 "id": "OJygeNuh-h8iTGk1",
                 "name": "Toy Story",
-                "year": 2008,
-                "author": "Deddy",
-                "summary": "Good",
-                "publisher": "American Publisher",
-                "pageCount": 100,
-                "readPage": 75,
-                "finished": false,
-                "reading": true,
-                "insertedAt": "2021-06-01T03:10:18.766Z",
-                "updatedAt": "2021-06-01T03:10:18.766Z"
+                "publisher": "American Publisher"
             }
         ]
     }
