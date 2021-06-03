@@ -4,7 +4,7 @@
  - [Technologies](#Technologies)
  - [Install](#Install)
  - [Run](#Run)
- - [API Guide](#API%Guide)
+ - [API Guide](#API-Guide)
  - [Author](#Author)
  - [Reference](#Reference)
 
@@ -17,15 +17,15 @@
 
 ## Install
 - Install NodeJS.
-```
+```shell
 sudo apt install nodejs
 ```
 - Install Node Package Manager (NPM).
-```
+```shell
 sudo apt install npm
 ```
 - Install NPM modules.
-```
+```shell
 npm install
 ```
 
@@ -39,7 +39,7 @@ npm run start
 - Method : POST
 - URL : /books
 - Body Request:
-```
+```json
 {
     "name": string,
     "year": number,
@@ -56,7 +56,7 @@ npm run start
 - Method : GET
 - URL: /books
 - Response Body:
-```
+```json
 {
     "status": "success",
     "data": {
@@ -80,7 +80,7 @@ npm run start
 - Method : GET
 - URL: /books/{bookId}
 - Response Body:
-```
+```json
 {
     "status": "success",
     "data": {
@@ -106,7 +106,7 @@ npm run start
 - Method : PUT
 - URL : /books/{bookId}
 - Body Request:
-```
+```json
 {
     "name": string,
     "year": number,
