@@ -66,7 +66,7 @@ const getAllBooksHandler = (request, h) => {
     const response = h.response({
         status: 'success',
         data: {
-            getBooks,
+            books: getBooks,
         },
     });
 
