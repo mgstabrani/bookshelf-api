@@ -75,6 +75,10 @@ npm run start
     }
 }
 ```
+#### Query parameters:
+- `?name` : display all books with name in the query.
+- `?reading` : value 0 will display all unreading books, value 1 will display all reading books.
+- `?finished` : value 0 will display all unfinished books, value 1 will display all finished books.
 
 ### Get book by id
 - Method : GET
