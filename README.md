@@ -136,3 +136,4 @@ npm run start
 - [Hapi Module](https://hapi.dev/)
 - [Nodemon Module](https://www.npmjs.com/package/nodemon)
 - [Nanoid](https://www.npmjs.com/package/nanoid)
+- [AirBnB Code Style](https://github.com/airbnb/javascript)
