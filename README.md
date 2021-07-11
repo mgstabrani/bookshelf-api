@@ -33,6 +33,11 @@ npm install
 ```
 npm run start
 ```
+or
+```
+npm run dev
+```
+for development purpose.
 
 ## API Guide
 ### Save book
