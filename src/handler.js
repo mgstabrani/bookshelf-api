@@ -1,5 +1,5 @@
 const { nanoid } = require('nanoid');
-const books = require('./books');
+let books = require('./books');
 
 const saveBookHandler = (request, h) => {
   const {
@@ -68,71 +68,17 @@ const getAllBooksHandler = (request, h) => {
   const { name, reading, finished } = request.query;
 
   if (name) {
-    const bookByName = books.filter((n) => n.name === name);
-
-    if (bookByName.length !== 0) {
-      return {
-        status: 'success',
-        data: {
-          books: bookByName.map((book) => ({
-            id: book.id,
-            name: book.name,
-            publisher: book.publisher,
-          })),
-        },
-      };
-    } const response = h.response({
-      status: 'fail',
-      message: 'Buku tidak ditemukan',
-    });
-    response.code(404);
-    return response;
+    books = books.filter((n) => n.name.toLowerCase().includes(name.toLowerCase()));
   }
 
   if (reading) {
-    const bookAllReading = books.filter((n) => n.reading === reading);
-
-    if (bookAllReading.length !== 0) {
-      return {
-        status: 'success',
-        data: {
-          books: bookAllReading.map((book) => ({
-            id: book.id,
-            name: book.name,
-            publisher: book.publisher,
-          })),
-        },
-      };
-    }
-    const response = h.response({
-      status: 'fail',
-      message: 'Buku tidak ditemukan',
-    });
-    response.code(404);
-    return response;
+    // eslint-disable-next-line eqeqeq
+    books = books.filter((n) => n.reading == reading);
   }
 
   if (finished) {
-    const bookAllFinished = books.filter((n) => n.finished === finished);
-
-    if (bookAllFinished.length !== 0) {
-      return {
-        status: 'success',
-        data: {
-          books: bookAllFinished.map((book) => ({
-            id: book.id,
-            name: book.name,
-            publisher: book.publisher,
-          })),
-        },
-      };
-    }
-    const response = h.response({
-      status: 'fail',
-      message: 'Buku tidak ditemukan',
-    });
-    response.code(404);
-    return response;
+    // eslint-disable-next-line eqeqeq
+    books = books.filter((n) => n.finished == finished);
   }
 
   const response = h.response({
