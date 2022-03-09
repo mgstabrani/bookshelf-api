@@ -138,7 +138,7 @@ for development purpose.
   - [X] ?reading: Bernilai 0 atau 1. Bila 0, tampilkan buku yang sedang tidak dibaca (reading: false). Bila 1, tampilkan buku yang sedang dibaca (reading: true). Selain itu, tampilkan buku, baik yang sedang dibaca maupun tidak.
   - [X] ?finished: Bernilai 0 atau 1. Bila 0, tampilkan buku yang sudah belum selesai dibaca (finished: false). Bila 1, tampilkan buku yang sudah selesai dibaca (finished: true). Selain itu, tampilkan buku, baik yang sudah selesai atau belum dibaca.
 - [ ] Menerapkan CORS pada seluruh resource yang ada.
-- [ ] Menggunakan ESLint dan menerapkan salah satu style guide agar gaya penulisan kode JavaScript lebih konsisten.
+- [X] Menggunakan ESLint dan menerapkan salah satu style guide agar gaya penulisan kode JavaScript lebih konsisten.
 
 ## Author
 [Mgs. Tabrani (13519122)](https://github.com/mgstabrani)
